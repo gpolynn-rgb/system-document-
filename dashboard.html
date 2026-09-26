@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Saint John Bosco</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+  <aside class="sidebar">
+    <a href="dashboard.html" class="sidebar-brand" aria-label="Saint John Bosco home">
+      <span class="sidebar-brand__icon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.36L12 15l5-2.37v3.36z"/>
+        </svg>
+      </span>
+      <span>
+        <span class="sidebar-brand__title">Saint John Bosco</span>
+        <span class="sidebar-brand__subtitle">RECORDS OFFICE</span>
+      </span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="sidebar-nav">
+        <li>
+          <a class="sidebar-nav__link sidebar-nav__link--active" href="dashboard.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-nav__link" href="document-request.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            Document Requests
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-nav__link" href="student-records.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Student Records
+          </a>
+        </li>
+        <li>
+          <a class="sidebar-nav__link" href="document-types.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+            Document Types
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="sidebar-footer">© 2024 St. John Bosco Document Request System</p>
+  </aside>
+
+  <div class="dashboard-shell">
+    <main class="dashboard-main">
+      <div class="dashboard-main__inner">
+        <h1 class="dashboard-main__heading">Dashboard</h1>
+        <p class="dashboard-main__lead">Overview of document requests and records activity</p>
+
+        <div class="stat-cards">
+          <article class="stat-card">
+            <div>
+              <p class="stat-card__label">Pending</p>
+              <p class="stat-card__value">2</p>
+              <p class="stat-card__hint">Awaiting review</p>
+            </div>
+            <span class="stat-card__icon stat-card__icon--pending" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+              </svg>
+            </span>
+          </article>
+          <article class="stat-card">
+            <div>
+              <p class="stat-card__label">Processing</p>
+              <p class="stat-card__value">1</p>
+              <p class="stat-card__hint">In progress</p>
+            </div>
+            <span class="stat-card__icon stat-card__icon--processing" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+              </svg>
+            </span>
+          </article>
+          <article class="stat-card">
+            <div>
+              <p class="stat-card__label">Ready for Pickup</p>
+              <p class="stat-card__value">1</p>
+              <p class="stat-card__hint">Available now</p>
+            </div>
+            <span class="stat-card__icon stat-card__icon--ready" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </span>
+          </article>
+          <article class="stat-card">
+            <div>
+              <p class="stat-card__label">Total Requests</p>
+              <p class="stat-card__value">5</p>
+              <p class="stat-card__hint">All time</p>
+            </div>
+            <span class="stat-card__icon stat-card__icon--total" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </span>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="card" aria-labelledby="recent-heading">
+            <div class="card__header">
+              <h2 id="recent-heading" class="card__title">Recent Requests</h2>
+              <a class="card__link" href="document-request.html">View all</a>
+            </div>
+            <ul class="request-list">
+              <li class="request-list__item">
+                <div>
+                  <p class="request-list__name">Maria Clara Santos</p>
+                  <p class="request-list__meta">Transcript of Records · SR-2025-001</p>
+                </div>
+                <span class="badge badge--processing">Processing</span>
+              </li>
+              <li class="request-list__item">
+                <div>
+                  <p class="request-list__name">Juan Miguel Reyes</p>
+                  <p class="request-list__meta">Good Moral Certificate · SR-2025-002</p>
+                </div>
+                <span class="badge badge--ready">Ready for Pickup</span>
+              </li>
+              <li class="request-list__item">
+                <div>
+                  <p class="request-list__name">Ana Sofia Dela Cruz</p>
+                  <p class="request-list__meta">Form 137 · SR-2025-003</p>
+                </div>
+                <span class="badge badge--pending">Pending</span>
+              </li>
+              <li class="request-list__item">
+                <div>
+                  <p class="request-list__name">Carlos Antonio Lim</p>
+                  <p class="request-list__meta">Diploma Duplicate · SR-2025-004</p>
+                </div>
+                <span class="badge badge--released">Released</span>
+              </li>
+            </ul>
+          </section>
+
+          <div class="dashboard-aside">
+            <section class="cta-card" aria-labelledby="records-heading">
+              <h2 id="records-heading" class="cta-card__title">Records Office</h2>
+              <p class="cta-card__text">Manage student document requests, track processing status, and keep records up to date.</p>
+              <a class="cta-card__link" href="document-request.html">Manage Requests →</a>
+            </section>
+
+            <section class="card" aria-labelledby="summary-heading">
+              <div class="card__header">
+                <h2 id="summary-heading" class="card__title">Status Summary</h2>
+              </div>
+              <ul class="summary-list">
+                <li class="summary-list__item">
+                  <span class="summary-list__left">
+                    <span class="summary-dot summary-dot--pending" aria-hidden="true"></span>
+                    Pending
+                  </span>
+                  <span class="summary-list__count">2</span>
+                </li>
+                <li class="summary-list__item">
+                  <span class="summary-list__left">
+                    <span class="summary-dot summary-dot--processing" aria-hidden="true"></span>
+                    Processing
+                  </span>
+                  <span class="summary-list__count">1</span>
+                </li>
+                <li class="summary-list__item">
+                  <span class="summary-list__left">
+                    <span class="summary-dot summary-dot--ready" aria-hidden="true"></span>
+                    Ready for Pickup
+                  </span>
+                  <span class="summary-list__count">1</span>
+                </li>
+                <li class="summary-list__item">
+                  <span class="summary-list__left">
+                    <span class="summary-dot summary-dot--total" aria-hidden="true"></span>
+                    Total
+                  </span>
+                  <span class="summary-list__count">5</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
