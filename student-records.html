@@ -3,76 +3,546 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Student Records — Saint John Bosco</title>
+
   <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body class="dashboard-body">
+
+
   <aside class="sidebar">
+
     <a href="dashboard.html" class="sidebar-brand" aria-label="Saint John Bosco home">
+
       <span class="sidebar-brand__icon">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.36L12 15l5-2.37v3.36z"/>
         </svg>
       </span>
+
       <span>
         <span class="sidebar-brand__title">Saint John Bosco</span>
         <span class="sidebar-brand__subtitle">RECORDS OFFICE</span>
       </span>
+
     </a>
 
+
+    
     <nav aria-label="Main navigation">
+
       <ul class="sidebar-nav">
+
+        <!-- Dashboard -->
         <li>
           <a class="sidebar-nav__link" href="dashboard.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+
             </svg>
+
             Dashboard
           </a>
         </li>
+
+
+   
         <li>
           <a class="sidebar-nav__link" href="document-request.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+
             </svg>
+
             Document Requests
           </a>
         </li>
+
+
+        <!-- Student Records -->
         <li>
-          <a class="sidebar-nav__link sidebar-nav__link--active" href="student-records.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          <a class="sidebar-nav__link sidebar-nav__link--active"
+             href="student-records.html">
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+
             </svg>
+
             Student Records
           </a>
         </li>
+
+
+        
         <li>
           <a class="sidebar-nav__link" href="document-types.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+
               <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+
             </svg>
+
             Document Types
           </a>
         </li>
+
+
+        <!-- Logout -->
+        <li>
+          <a class="sidebar-nav__link" href="logout.php">
+
+            <span>↪</span>
+
+            Logout
+          </a>
+        </li>
+
       </ul>
+
     </nav>
 
-    <p class="sidebar-footer">© 2024 St. John Bosco Document Request System</p>
+
+    
+    <p class="sidebar-footer">
+      © 2024 St. John Bosco Document Request System
+    </p>
+
   </aside>
 
+
+
   <div class="dashboard-shell">
+
     <main class="dashboard-main">
+
       <div class="dashboard-main__inner">
-        <h1 class="dashboard-main__heading">Student Records</h1>
-        <p class="dashboard-main__lead">Search and manage enrolled student information.</p>
-        <section class="dashboard-panel">
-          <p>Student directory and record details can be added here.</p>
+
+
+       
+        <div class="page-header">
+
+          <div>
+
+            <h1 class="dashboard-main__heading">
+              Student Records
+            </h1>
+
+            <p class="dashboard-main__lead">
+              Manage and view student academic records
+            </p>
+
+          </div>
+
+
+          <button class="new-request-btn" onclick="openAddStudent()">
+            + Add Student
+          </button>
+
+        </div>
+
+
+       
+        <div class="records-toolbar">
+
+          <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+            type="text"
+            id="studentSearch"
+            placeholder="Search by name or student number..."
+            onkeyup="searchStudents()"
+          >
+            >
+
+          </div>
+
+
+          <button class="filter-btn active" onclick="filterStudents('all', this)">
+            All
+          </button>
+          
+          <button class="filter-btn" onclick="filterStudents('active', this)">
+            Currently Enrolled
+          </button>
+          
+          <button class="filter-btn" onclick="filterStudents('graduated', this)">
+            Graduated
+          </button>
+
+        </div>
+
+
+       
+        <div id="addStudentForm" class="add-student-form" style="display: none;">
+
+            <h2>Add Student</h2>
+          
+            <form onsubmit="addStudent(event)">
+          
+              <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" id="studentName" required>
+              </div>
+          
+              <div class="form-group">
+                <label>Student Number</label>
+                <input type="text" id="studentNumber" required>
+              </div>
+          
+              <div class="form-group">
+                <label>Program</label>
+                <input type="text" id="studentProgram" required>
+              </div>
+          
+              <div class="form-group">
+                <label>Year Level</label>
+                <select id="studentYear" required>
+                  <option value="">Select Year Level</option>
+                  <option>1st Year</option>
+                  <option>2nd Year</option>
+                  <option>3rd Year</option>
+                  <option>4th Year</option>
+                </select>
+              </div>
+          
+              <div class="form-group">
+                <label>Status</label>
+                <select id="studentStatus" required>
+                  <option value="Active">Active</option>
+                  <option value="Graduated">Graduated</option>
+                </select>
+              </div>
+          
+              <button type="submit" class="request-button">
+                Add Student
+              </button>
+          
+            </form>
+          
+          </div>
+        <section class="records-table-card">
+
+          <table class="request-table">
+
+            <thead>
+
+              <tr>
+
+                <th>Student</th>
+                <th>Student Number</th>
+                <th>Program</th>
+                <th>Year Level</th>
+                <th>Status</th>
+                <th>Action</th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody>
+
+              <tr>
+
+                <td>
+                  <strong>Maria Clara Santos</strong>
+                </td>
+
+                <td>
+                  SJB-2023-001
+                </td>
+
+                <td>
+                  BS Information Technology
+                </td>
+
+                <td>
+                  4th Year
+                </td>
+
+                <td>
+                  <span class="status-badge status-active">
+                    Active
+                  </span>
+                </td>
+
+                <td>
+                  <button class="view-btn">
+                    View
+                  </button>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>Andrea Lim</strong>
+                </td>
+
+                <td>
+                  SJB-2021-089
+                </td>
+
+                <td>
+                  BS Information Technology
+                </td>
+
+                <td>
+                  4th Year
+                </td>
+
+                <td>
+                  <span class="status-badge status-active">
+                    Active
+                  </span>
+                </td>
+
+                <td>
+                  <button class="view-btn">
+                    View
+                  </button>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>Juan Dela Cruz</strong>
+                </td>
+
+                <td>
+                  SJB-2022-045
+                </td>
+
+                <td>
+                  BS Business Administration
+                </td>
+
+                <td>
+                  3rd Year
+                </td>
+
+                <td>
+                  <span class="status-badge status-active">
+                    Active
+                  </span>
+                </td>
+
+                <td>
+                  <button class="view-btn">
+                    View
+                  </button>
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  <strong>Roberto Garcia</strong>
+                </td>
+
+                <td>
+                  SJB-2020-102
+                </td>
+
+                <td>
+                  BS Information Technology
+                </td>
+
+                <td>
+                  Graduated
+                </td>
+
+                <td>
+                  <span class="status-badge status-graduated">
+                    Graduated
+                  </span>
+                </td>
+
+                <td>
+                  <button class="view-btn">
+                    View
+                  </button>
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
         </section>
+
       </div>
+
     </main>
+
   </div>
+
 </body>
+<script>
+
+    function openAddStudent() {
+    
+      const form = document.getElementById("addStudentForm");
+    
+      if (form.style.display === "none") {
+        form.style.display = "block";
+      } else {
+        form.style.display = "none";
+      }
+    
+    }
+    
+    
+    function addStudent(event) {
+    
+      event.preventDefault();
+    
+      const name = document.getElementById("studentName").value;
+      const number = document.getElementById("studentNumber").value;
+      const program = document.getElementById("studentProgram").value;
+      const year = document.getElementById("studentYear").value;
+      const status = document.getElementById("studentStatus").value;
+    
+      const table = document.querySelector(".request-table tbody");
+    
+      const row = document.createElement("tr");
+    
+      const statusClass =
+        status === "Active"
+          ? "status-active"
+          : "status-graduated";
+    
+      row.innerHTML = `
+        <td><strong>${name}</strong></td>
+        <td>${number}</td>
+        <td>${program}</td>
+        <td>${year}</td>
+        <td>
+          <span class="status-badge ${statusClass}">
+            ${status}
+          </span>
+        </td>
+        <td>
+          <button class="view-btn">View</button>
+        </td>
+      `;
+    
+      table.appendChild(row);
+    
+      document.getElementById("addStudentForm").style.display = "none";
+    
+      document.querySelector("form").reset();
+    
+      alert("Student added successfully!");
+    
+    }
+    
+    </script>
+<script>
+    function filterStudents(status, button) {
+    
+      const rows = document.querySelectorAll(
+        ".request-table tbody tr"
+      );
+    
+      const buttons = document.querySelectorAll(".filter-btn");
+    
+      buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+    
+      button.classList.add("active");
+    
+      rows.forEach(function(row) {
+    
+        const statusText = row
+          .querySelector(".status-badge")
+          .textContent
+          .trim()
+          .toLowerCase();
+    
+        if (status === "all") {
+          row.style.display = "";
+        }
+        else if (status === "active" && statusText === "active") {
+          row.style.display = "";
+        }
+        else if (status === "graduated" && statusText === "graduated") {
+          row.style.display = "";
+        }
+        else {
+          row.style.display = "none";
+        }
+    
+      });
+    }
+    </script>
+<script>
+    function searchStudents() {
+    
+      const input = document.getElementById("studentSearch");
+      const filter = input.value.toLowerCase();
+    
+      const rows = document.querySelectorAll(
+        ".request-table tbody tr"
+      );
+    
+      rows.forEach(function(row) {
+    
+        const text = row.textContent.toLowerCase();
+    
+        if (text.includes(filter)) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+    
+      });
+    
+    }
+    </script>
 </html>

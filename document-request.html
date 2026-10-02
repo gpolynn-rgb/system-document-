@@ -3,117 +3,443 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Document Requests — Saint John Bosco</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Custom Dashboard CSS -->
   <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body class="dashboard-body">
+
+  <!-- ================= SIDEBAR ================= -->
+
   <aside class="sidebar">
-    <a href="dashboard.html" class="sidebar-brand" aria-label="Saint John Bosco home">
+
+    <a href="dashboard.html" class="sidebar-brand">
+
       <span class="sidebar-brand__icon">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.36L12 15l5-2.37v3.36z"/>
         </svg>
       </span>
+
       <span>
-        <span class="sidebar-brand__title">Saint John Bosco</span>
-        <span class="sidebar-brand__subtitle">RECORDS OFFICE</span>
+        <span class="sidebar-brand__title">
+          Saint John Bosco
+        </span>
+
+        <span class="sidebar-brand__subtitle">
+          RECORDS OFFICE
+        </span>
       </span>
+
     </a>
 
-    <nav aria-label="Main navigation">
+
+    <nav>
+
       <ul class="sidebar-nav">
+
+        <!-- Dashboard -->
+
         <li>
           <a class="sidebar-nav__link" href="dashboard.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+
             </svg>
+
             Dashboard
+
           </a>
         </li>
+
+
+        <!-- Document Requests -->
+
         <li>
-          <a class="sidebar-nav__link sidebar-nav__link--active" href="document-request.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <a
+            class="sidebar-nav__link sidebar-nav__link--active"
+            href="document-request.html"
+          >
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+
+              <polyline points="14 2 14 8 20 8"/>
+
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+
             </svg>
+
             Document Requests
+
           </a>
         </li>
+
+
+        <!-- Student Records -->
+
         <li>
           <a class="sidebar-nav__link" href="student-records.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+
+              <circle cx="9" cy="7" r="4"/>
+
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+
             </svg>
+
             Student Records
+
           </a>
         </li>
+
+
+        <!-- Document Types -->
+
         <li>
           <a class="sidebar-nav__link" href="document-types.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2">
+
               <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+
             </svg>
+
             Document Types
+
           </a>
         </li>
+
       </ul>
+
     </nav>
 
-    <p class="sidebar-footer">© 2024 St. John Bosco Document Request System</p>
+
+    <!-- Logout -->
+
+    <a href="index.html" class="sidebar-logout">
+
+      <svg viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2">
+
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+
+        <polyline points="16 17 21 12 16 7"/>
+        <line x1="21" y1="12" x2="9" y2="12"/>
+
+      </svg>
+
+      Log Out
+
+    </a>
+
+
+    <p class="sidebar-footer">
+      © 2024 St. John Bosco Document Request System
+    </p>
+
   </aside>
 
+
+  <!-- ================= MAIN ================= -->
+
   <div class="dashboard-shell">
+
     <main class="dashboard-main">
+
       <div class="dashboard-main__inner">
-        <h1 class="dashboard-main__heading">Document Requests</h1>
-        <p class="dashboard-main__lead">Review and process student document requests.</p>
-        <section class="dashboard-panel">
-          <section class="dashboard-panel">
-            <h2>New Document Request</h2>
-          
-            <form class="request-form">
-          
-              <div class="form-group">
-                <label for="student-id">Student ID</label>
-                <input type="text" id="student-id" name="student-id" placeholder="Enter Student ID">
-              </div>
-          
-              <div class="form-group">
-                <label for="student-name">Student Name</label>
-                <input type="text" id="student-name" name="student-name" placeholder="Enter Student Name">
-              </div>
-          
-              <div class="form-group">
-                <label for="document-type">Document Type</label>
-                <select id="document-type" name="document-type">
-                  <option value="">Select Document</option>
-                  <option value="tor">Transcript of Records</option>
-                  <option value="coe">Certificate of Enrollment</option>
-                  <option value="good-moral">Good Moral Certificate</option>
-                  <option value="certification">Other Certification</option>
-                </select>
-              </div>
-          
-              <div class="form-group">
-                <label for="purpose">Purpose</label>
-                <textarea id="purpose" name="purpose" placeholder="Enter purpose of request"></textarea>
-              </div>
-          
-              <div class="form-group">
-                <label for="request-date">Request Date</label>
-                <input type="date" id="request-date" name="request-date">
-              </div>
-          
-              <button type="submit" class="request-button">
-                Submit Request
-              </button>
-          
-            </form>
-          </section>
-        </section>
+
+
+        <!-- HEADER -->
+
+        <div class="request-page-header">
+
+          <div>
+
+            <h1 class="dashboard-main__heading">
+              Document Requests
+            </h1>
+
+            <p class="dashboard-main__lead">
+              Manage and track all student document requests
+            </p>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="btn btn-primary new-request-btn"
+          >
+
+            + New Request
+
+          </button>
+
+        </div>
+
+
+        <!-- SEARCH + FILTER -->
+
+        <div class="request-toolbar">
+
+          <div class="search-box">
+
+            <span class="search-icon">
+              @
+            </span>
+
+            <input
+              type="text"
+              placeholder="Search by name, student number, or document"
+            >
+
+          </div>
+
+
+          <div class="filter-buttons">
+
+            <button class="filter-btn active">
+              All
+            </button>
+
+            <button class="filter-btn">
+              Pending
+            </button>
+
+            <button class="filter-btn">
+              Processing
+            </button>
+
+            <button class="filter-btn">
+              Ready for pickup
+            </button>
+
+            <button class="filter-btn">
+              Released
+            </button>
+
+            <button class="filter-btn">
+              Rejected
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- REQUEST TABLE -->
+
+        <div class="request-table-card">
+
+          <div class="table-responsive">
+
+            <table class="table request-table">
+
+              <thead>
+
+                <tr>
+
+                  <th>Student</th>
+
+                  <th>Document</th>
+
+                  <th>Priority</th>
+
+                  <th>Status</th>
+
+                  <th>Date</th>
+
+                </tr>
+
+              </thead>
+
+
+              <tbody>
+
+
+                <!-- REQUEST 1 -->
+
+                <tr>
+
+                  <td>
+
+                    <strong>
+                      Maria Clara Santos
+                    </strong>
+
+                    <span class="student-number">
+                      SJB-2023-001
+                    </span>
+
+                  </td>
+
+
+                  <td>
+                    Transcript of Records
+                  </td>
+
+
+                  <td>
+                    Normal
+                  </td>
+
+
+                  <td>
+
+                    <span class="status-badge status-pending">
+                      Pending
+                    </span>
+
+                  </td>
+
+
+                  <td>
+                    09-29-26
+                  </td>
+
+                </tr>
+
+
+                <!-- REQUEST 2 -->
+
+                <tr>
+
+                  <td>
+
+                    <strong>
+                      Maria Clara Santos
+                    </strong>
+
+                    <span class="student-number">
+                      SJB-2023-001
+                    </span>
+
+                  </td>
+
+
+                  <td>
+                    Diploma
+                  </td>
+
+
+                  <td class="urgent">
+                    Urgent
+                  </td>
+
+
+                  <td>
+
+                    <span class="status-badge status-processing">
+                      Processing
+                    </span>
+
+                  </td>
+
+
+                  <td>
+                    09-29-26
+                  </td>
+
+                </tr>
+
+
+                <!-- REQUEST 3 -->
+
+                <tr>
+
+                  <td>
+
+                    <strong>
+                      Maria Clara Santos
+                    </strong>
+
+                    <span class="student-number">
+                      SJB-2023-001
+                    </span>
+
+                  </td>
+
+
+                  <td>
+                    Diploma
+                  </td>
+
+
+                  <td>
+                    Normal
+                  </td>
+
+
+                  <td>
+
+                    <span class="status-badge status-ready">
+                      Ready for Pickup
+                    </span>
+
+                  </td>
+
+
+                  <td>
+                    09-29-26
+                  </td>
+
+                </tr>
+
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </main>
+
   </div>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+
 </body>
 </html>
